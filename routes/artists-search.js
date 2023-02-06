@@ -23,13 +23,14 @@ router.get('/', function(req, res, next) {
     // console.log('The received data from the API: ',{ artist: data.body.artists.items});
         
     res.render('artist-search-result', { artist: data.body.artists.items});
+    console.log(data.body.artists.items)
     
   })
   .catch(err => console.log('The error while searching artists occurred: ', err));
 });
 
 router.get('/albums/:artistId', (req, res, next) =>{
-  
+
 })
 
 module.exports = router;
